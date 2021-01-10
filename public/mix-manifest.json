@@ -1,0 +1,10 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/react/pages/AddQuestions.js": "/js/react/pages/AddQuestions.js",
+    "/js/react/pages/AddQuiz.js": "/js/react/pages/AddQuiz.js",
+    "/js/react/pages/EditQuestions.js": "/js/react/pages/EditQuestions.js",
+    "/js/react/pages/EditQuiz.js": "/js/react/pages/EditQuiz.js",
+    "/js/react/pages/Questions.js": "/js/react/pages/Questions.js",
+    "/js/react/pages/Quizzes.js": "/js/react/pages/Quizzes.js"
+}
