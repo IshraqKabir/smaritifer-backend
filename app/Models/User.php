@@ -43,6 +43,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $casts = [
+        'is_admin' => 'boolean',
         'email_verified_at' => 'datetime',
     ];
 

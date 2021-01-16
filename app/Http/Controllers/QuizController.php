@@ -11,7 +11,6 @@ class QuizController extends Controller
 {
     public function store()
     {
-        dd(Auth::user);
         return view('quiz.add', [
             'auth_token' => Auth::user()->token->token,
             'serial_limit' => Quiz::all()->count() + 1,
