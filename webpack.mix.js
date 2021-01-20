@@ -19,3 +19,7 @@ mix.react('resources/js/app.js', 'public/js')
     .react('resources/js/react/pages/EditQuestions/app.js', 'public/js/react/pages/EditQuestions.js')
     .react('resources/js/react/pages/Questions/app.js', 'public/js/react/pages/Questions.js')
     .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/canvas-ui/app.js', 'public/js/canvas-ui.js').sass(
+    'resources/sass/canvas-ui.scss',
+    'public/css/canvas-ui.css'
+);
