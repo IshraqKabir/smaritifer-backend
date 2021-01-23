@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 
 class Topic extends Model
 {
@@ -61,6 +62,14 @@ class Topic extends Model
     public function posts(): BelongsToMany
     {
         return $this->belongsToMany(Post::class, 'canvas_posts_topics', 'topic_id', 'post_id');
+    }
+
+    // custom
+    public static function topicsOrderedByPostsCount()
+    {
+        $posts = DB::select('select canvas_topics.name, canvas_topics.slug, count(canvas_posts_topics.post_id) as posts from canvas_topics left join canvas_posts_topics on canvas_topics.id=canvas_posts_topics.topic_id group by canvas_topics.id order by posts desc limit 5;');
+        
+        return $posts;
     }
 
     /**

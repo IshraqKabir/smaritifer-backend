@@ -93,9 +93,9 @@ class CanvasUiController extends Controller
      * @param Request $request
      * @return string
      */
-    public function getTopics(Request $request): string
+    public function getTopics(Request $request)
     {
-        return Topic::all()->toJson();
+        return Topic::topicsOrderedByPostsCount();
     }
 
     /**

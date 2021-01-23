@@ -63,6 +63,7 @@ class Tag extends Model
         return $this->belongsToMany(Post::class, 'canvas_posts_tags', 'tag_id', 'post_id');
     }
 
+
     /**
      * Get the user relationship.
      *
